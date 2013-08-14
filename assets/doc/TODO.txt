@@ -1,3 +1,24 @@
-- create even ul menu (4 objects)
-- create odd ul menu (5 objects)
-- 
+
+~~ Near Term ~~
+- determine layout balancing
+	- up to 5 items
+
+- object affordance
+
+— use cases
+	• Global
+	— social sharing [email, retweet, facebook]
+	— web nav [browser: fwd/back/reload]
+	— site map [local: home/contact/blog/etc]
+
+	• Local
+	— maps [directions / zooming]
+	— dev menu on selected object
+
+~~ Future Possibilites ~~
+— object awareness (using each link differently)
+– submenus
+— visual themes
+	- icons
+- browser plugin
+
