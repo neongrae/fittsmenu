@@ -1,0 +1,137 @@
+@import "mixins";
+@import "font-awesome";
+body {
+  padding: 100px;
+}
+@include animation(push1) {
+  0%   { 
+    @include opacity(0);
+    @include translate(0,30); 
+  }
+}
+@include animation(push2) {
+  0%   { 
+    @include opacity(0); 
+    @include translate(-10,20); 
+  }
+}
+@include animation(push3) {
+  0%   { 
+    @include opacity(0); 
+    @include translate(-20,10); 
+  }
+}
+@include animation(push4) {
+  0%   { 
+    @include opacity(0);
+    @include scale(.5);
+    @include translate(-30,0);
+  }
+}
+@include animation(fadein) {
+  0%   { 
+    @include opacity(0); 
+  }
+}
+.fittsmenu {
+  font-family: arial, helvetica;
+  display: none;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  @extend %border-box;
+  &:before {
+    font-family: 'FontAwesome';
+    text-align: center;
+
+  @include animate(fadein);
+    @extend %border-box;
+    color: white;
+    content: "\f00d";
+    font-size: 25px;
+    padding-top: 12px;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 50px;
+    height: 50px;
+    @include radius(25px);
+    background-color: black;
+    @include opacity($opacity: 25);
+    @include shadow($shadow: 0 0px 10px rgba(0,0,0,.8));
+  }
+  padding: 0px;
+  @include transition;
+  &.active {
+    display: block;
+    label {
+      display: none;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      padding: 2px 7px;
+      font-size: 15px;
+      margin-top: -67px;
+      margin-left: 43px;
+      @include rotate(-30);
+    }
+    li { 
+      displaY: block;
+      position: absolute;
+      height: 50px;
+      &:first-of-type {
+           @include animate(push1);
+
+        }
+      &:nth-of-type(2) {
+        left: 48px;
+        top:22px;
+            @include animate(push2);
+          @include delay(2);
+
+      }
+      &:nth-of-type(3) {
+        right: 17px;
+        bottom:38px;
+          @include animate(push3);
+          @include delay(4);
+      }
+      &:nth-of-type(4) {
+        right: 0px;
+        bottom: -12px;
+          @include animate(push4);
+          @include delay(6);
+      }
+      &:hover {
+        label {
+         display: block;
+         position: absolute;
+          @include shadow($shadow: 0 0px 10px rgba(0,0,0,.4));
+          @include animate(label);
+       }
+       a {
+        background-color: darken(red, 20%);
+        @include scale(1.2);
+        @include shadow($shadow: 0 0px 10px rgba(0,0,0,.4));
+      }
+    }
+  }
+  a {
+    @include radius(30px);
+    display: inline-block;
+    width:50px;
+    text-align: center;
+    height: 50px;
+    overflow: none;
+    @include transition;
+    @extend %border-box;
+    padding-top: 8px;
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+    background-color: #666;
+    border: solid 2px white;
+    @include shadow($shadow: 0px 0px 2px rgba(0,0,0,.4));
+  }
+}
+}

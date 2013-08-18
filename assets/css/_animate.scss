@@ -1,30 +1,32 @@
-
-
+@include animation(menupush) {
+  0%   { 
+    @include opacity(0); 
+    @include translate(-50); 
+  }
+}
+@include animation(label) {
+  0%   { 
+    @include opacity(0); 
+   margin-left: -100px;
+  }
+}
+@include animation(progress) {
+  0%   {
+    background-size: 0% 100%;
+  }
+}
+@include animation(pushdown) {
+  0%   { 
+    @include opacity(0); 
+    @include translate(0, -12); 
+  }
+}
+@include animation(fadein) {
+  0%   { 
+    @include opacity(0); 
+    @include translate(-100, 0); 
+  }
+}
 // =================================
 // ANIMATIONS
 // =================================
-
-@include animate(menupush) {
-		0%   { 
-		@include opacity(0); 
-		@include translate(-50); 
-	}
-}
-@include animate(progress) {
-	0%   {
-		background-size: 0% 100%;
-	}
-}
-@include animate(pushdown) {
-	0%   { 
-		@include opacity(0); 
-		@include translate(0, -12); 
-	}
-}
-@include animate(fadein) {
-		0%   { 
-		@include opacity(0); 
-		@include translate(-100, 0); 
-	}
-}
-
