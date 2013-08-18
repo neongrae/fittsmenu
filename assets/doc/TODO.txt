@@ -1,8 +1,14 @@
+JAVSCRIPT
+1. press and hold adds .active to .fittsmenu
+	release removes .active
+2. detect cursor, display ul.fittsmenu on position
+3. detect screen size
+3. horizontal rotation: the more to the right, the greater the rotation (till 90deg)
+4. vertical rotation: the more to the top, the greater the rotation (till 90deg)
+5. negative balancing: revert icons and text rotation
 
 ~~ Near Term ~~
-- determine layout balancing
-	- up to 5 items
-
+- up to 5 or 7 items
 - object affordance
 
 — use cases
