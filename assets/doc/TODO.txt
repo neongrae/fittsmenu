@@ -11,24 +11,9 @@ JAVSCRIPT
 - up to 5 or 7 items
 - object affordance
 
-— use cases
-	• Global
-	— social sharing [email, retweet, facebook]
-	— web nav [browser: fwd/back/reload]
-	— site map [local: home/contact/blog/etc]
-
-	• Local
-	— maps [directions / zooming]
-	— dev menu on selected object
-
 ~~ Future Possibilites ~~
 — object awareness (using each link differently)
 – submenus
 — visual themes
 	- icons
 - browser plugin
-
-
-
-
-
